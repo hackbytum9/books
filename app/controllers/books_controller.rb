@@ -37,8 +37,8 @@ class BooksController < ApplicationController
 		end		
 	end
 
-	def book_img
-  params.require(:book).permit(:profile_image)
+	def user_params
+  params.require(:user).permit(:profile_image)
 	end
 
 	private 

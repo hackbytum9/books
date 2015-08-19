@@ -15,6 +15,11 @@
 	  	<%= b.label :Writer %>
 	  	<%= b.text_field :writer ,class: "form-control" %>
 	  </div>
+
+	  <div class="field">
+    <%= b.label :Profile_image %>
+    <%= b.attachment_field :profile_image %>
+  </div>
 	 
 	  <%= b.submit 'Edit', class: "btn btn-warning" %>
 	<% end %>

@@ -16,7 +16,11 @@
 	  	<%= b.text_field :writer ,class: "form-control" %>
 	  </div>
 
-	 
-<%= b.submit 'Add', class: "btn btn-primary" %>
-	<% end %>
+	  <div class="field">
+    <%= b.label :Profile_image %>
+    <%= b.attachment_field :profile_image %>
+  </div>
+	<%= b.submit 'Add', class: "btn btn-primary" %>
+		<% end %>
 </div>
+

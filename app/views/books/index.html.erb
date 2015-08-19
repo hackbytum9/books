@@ -3,13 +3,17 @@
 	<div class="row">
 	<%= link_to 'Add Book+',new_book_path, :class => "btn btn-primary pull-right" %>
 </div>
-
+ 
 
 
 	<div class="row">
 		
 		<% @books.each do |book| %>
 		<div class="col-md-4">
+
+			<div class="form-group">
+              <%= image_tag attachment_url(current_user, :profile_image, :fill, 150, 150, format: "jpg") %>
+       </div>
 			<div class="panel panel-default">
 			  <div class="panel-heading"><%= book.name %></div>
 			  <div class="panel-body">
@@ -21,6 +25,8 @@
 				<%= link_to 'Edit Book',edit_book_path(book), :class => "btn btn-warning text-align: center;" %>
 				<%= link_to 'Delete', book, method: :delete, data: { confirm: 'Are you sure?'  }, :class => "btn btn-danger text-align: center;" %>
 			</div>
+			
+
 		</div>
 		<% end %>
 
